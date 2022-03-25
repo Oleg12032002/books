@@ -3,14 +3,11 @@ const http = require('http');
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
-const socketIO = require('socket.io');
 const path= require("path");
 
 const port = process.env.PORT || 5000;
 
 const server = http.Server(app);
-
-const io = socketIO(server);
 
 app.use(cors());
 app.use(express.json());
